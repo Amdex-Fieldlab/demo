@@ -1,0 +1,33 @@
+version: '3'
+
+name: Fieldlab_ping_pong
+
+services:
+    zookeeper:
+      image: wurstmeister/zookeeper
+      container_name: zookeeper
+    kafka:
+      image: wurstmeister/kafka
+      container_name: kafka
+      environment:
+        KAFKA_ADVERTISED_HOST_NAME: kafka
+        KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      depends_on: 
+        - zookeeper
+    pong:
+      image: pong
+      container_name: pong
+      build:
+        dockerfile: dockerfilePong.yml
+      depends_on:
+        - kafka
+    ping:
+      image: ping
+      container_name: ping
+      build: 
+        dockerfile: dockerfilePing.yml
+      depends_on:
+        - pong
+        - kafka
+  
+
