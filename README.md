@@ -3,7 +3,7 @@ Ping Pong is a AMdEX fieldlab demo to verify if a local installation with Docker
 
 This example will create 4 docker containers: Zookeeper, Kafka, Ping and Pong. Kafka and Zookeeper are the communications parts of the system. Ping is a simple fieldlab application which communicates with Pong which is a fieldlab Executor. Ping will send a message and Pong will respond with a message and repeats this 100 times. The messages are numbered, to check if all the messages are correctly received, processed and responded.
 
-Note: The AMdEX Fieldlab Core jar is still work in progress, so the code is not included, only the build jar that was used for this demo. At a later data, the full code will becomde available.
+Note: The AMdEX Fieldlab Core jar is still work in progress, so the code is not included, only the build jar that was used for this demo. At a later date, the full code will becomde available.
 ## Prerequisites
 You need to have Docker installed and running on your system
 ## Build and Run
