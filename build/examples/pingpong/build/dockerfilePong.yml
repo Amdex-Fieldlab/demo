@@ -1,4 +1,4 @@
 FROM eclipse-temurin:latest
 RUN mkdir /opt/app
 COPY ping_pong/* /opt/app
-CMD cd /opt/app;java -cp example_ping_ping.jar eu.amdexfieldlab.core.runtime.StartAmdexFieldlabKt pong.properties
+CMD cd /opt/app;java -cp example_ping_pong.jar eu.amdexfieldlab.core.runtime.StartAmdexFieldlabKt pong.properties

@@ -1,6 +1,5 @@
 version: '3'
 
-name: Fieldlab_ping_pong
 
 services:
     zookeeper:
